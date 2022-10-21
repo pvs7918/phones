@@ -6,6 +6,7 @@ def search_data(field, name_string):
     reader = {}
     result_search = []
     with open(csvfile, 'r', encoding="utf-8") as file:
+
         reader = csv.DictReader(file)
         for row in reader:
             if row[field] == name_string:
