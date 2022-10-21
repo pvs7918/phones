@@ -1,13 +1,13 @@
 import csv
 
-csvfile = "base.csv"
+csvfile = 'base.csv'
 
-def search_data(field, name_string):
+def find_data(field, name_string):
     reader = {}
     result_search = []
     with open(csvfile, 'r', encoding="utf-8") as file:
 
-        reader = csv.DictReader(file)
+        reader = csv.DictReader(file, delimiter=';')
         for row in reader:
             if row[field] == name_string:
                 result_search += row.values()

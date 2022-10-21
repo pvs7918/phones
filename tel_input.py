@@ -1,4 +1,4 @@
-base_csv = 'phonebook.csv'
+base_csv = 'base.csv'
 
 def input_data():
     import csv
@@ -17,5 +17,5 @@ def input_data():
         values.append(enter)
     if len(values) == 4:
         with open(base_csv, 'a', encoding="utf-8") as file:
-            writer = csv.writer(file, lineterminator='\n')
+            writer = csv.writer(file, lineterminator='\n', delimiter=';')
             writer.writerow(values)
